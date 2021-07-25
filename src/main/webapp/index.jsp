@@ -7,5 +7,6 @@
 </head>
 <body>
 <c:out value="hello" />
+<a href="formatting.jsp">Formatting</a>
 </body>
 </html>
