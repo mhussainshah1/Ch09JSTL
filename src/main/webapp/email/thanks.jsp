@@ -61,11 +61,11 @@
     %>
     <p>Result: <c:out value="${i}" /></p>
 </c:catch>
+
 <c:if test="${e != null}">
     <p>An exception occurred. Message: ${e.message}</p>
-    <c:redirect url="/email/error_java.jsp" />
+<%--    <c:redirect url="/email/error_java.jsp" />--%>
 </c:if>
 
 </body>
-
 </html>
