@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JSP - Hello World</title>
-    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 <p><c:out value="${message}" default="No message"/></p>
 <p><c:out value="${message}">No message</c:out></p>
 
-<form action="emailList" method="post">
+<form action="${pageContext.request.contextPath}/emailList" method="post">
     <input name="action" type="hidden" value="add">
 
     <label class="pad_top" for="email">Email:</label>

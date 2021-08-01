@@ -1,10 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="user" scope="request" type="email.murach.business.User"/>
+
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Thanks</title>
-    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1>Thanks for joining our login.murach.email list</h1>
@@ -46,25 +48,26 @@
 <p>Numbers</p>
 <ul>
     <c:forEach items="${numbers}" var="number" begin="0" end="9" step="1" varStatus="status">
-        <li>${number} | First: ${status.first} | Last: ${status.last} | Index: ${status.index} | Count: ${status.count} </li>
+        <li>${number} | First: ${status.first} | Last: ${status.last} | Index: ${status.index} |
+            Count: ${status.count} </li>
     </c:forEach>
 </ul>
 
 <%--other tags--%>
-<c:set var="message" scope="session" value="Test Message" />
-<c:set target="${user}" property="firstName" value="John" />
+<c:set var="message" scope="session" value="Test Message"/>
+
+
+<c:set target="${user}" property="firstName" value="John"/>
 <label>First Name:</label><span><c:out value="${user.firstName}"/></span>
 
 <c:catch var="e">
-    <%
-        int i = 1/0;
-    %>
-    <p>Result: <c:out value="${i}" /></p>
+    <% int i = 1 / 0; %>
+    <p>Result: <c:out value="${i}"/></p>
 </c:catch>
 
 <c:if test="${e != null}">
     <p>An exception occurred. Message: ${e.message}</p>
-<%--    <c:redirect url="/email/error_java.jsp" />--%>
+    <c:redirect url="/email/error_java.jsp"/>
 </c:if>
 
 </body>

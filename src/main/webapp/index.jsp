@@ -2,17 +2,11 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
-
-    Email:
-    <form action="emailList" method="get">
-        <input type="submit" value="Email Application">
-    </form>
-
-    Cart :
-    <form action="cart" method="post">
-        <input type="submit" value="Cart Application">
-    </form>
+    <h1>JSTL</h1>
+    <p>Email: <a href="email/index.jsp">Email Application</a></p>
+    <p>Cart: <a href="cart/index.jsp">Cart Application</a></p>
 </body>
 </html>
