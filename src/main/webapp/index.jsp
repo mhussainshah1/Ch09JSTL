@@ -1,12 +1,18 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Title</title>
 </head>
 <body>
-<c:out value="hello" />
-<a href="formatting.jsp">Formatting</a>
+
+    Email:
+    <form action="emailList" method="get">
+        <input type="submit" value="Email Application">
+    </form>
+
+    Cart :
+    <form action="cart" method="post">
+        <input type="submit" value="Cart Application">
+    </form>
 </body>
 </html>
